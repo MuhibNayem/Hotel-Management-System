@@ -43,15 +43,18 @@ public class loginController {
     private void login() {
         email = view.getEmailTextfield().getText();
         pass = view.getPasswordField().getText();
+        model.setEmail(email);
+        model.setPassword(pass);
         
         check = "";
         
-        
+        String flag = model.getAdminCredential();
         if(email.equals("") || pass.equals("")){
             check = "true";
             JOptionPane.showMessageDialog(null, "All fields are Required!");
         }
-        else if (email.equals("hmsAdmin") && pass.equals("admin")){
+        
+        else if (flag.equals("admin")){
             check = "ture";
             
             adminHomeModel am = new adminHomeModel();
@@ -61,8 +64,7 @@ public class loginController {
             view.dispose();
             
         }else{
-            model.setEmail(email);
-            model.setPassword(pass);
+            
             
             check = model.login();
             

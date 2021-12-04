@@ -6,6 +6,7 @@
 package model;
 
 import DAO.loginDAO;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -47,6 +48,12 @@ public class LoginModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAdminCredential() {
+        String check = "";
+        check = loginDAO.adminLogin(email,password);
+        return check;
     }
     
     

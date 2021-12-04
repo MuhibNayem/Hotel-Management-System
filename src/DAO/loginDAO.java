@@ -28,8 +28,29 @@ public class loginDAO {
                         status = "true";
                         
                     } else {
-                        status = "false";
+                        status = "true";
                     }
+                }
+            } catch (Exception e) {
+                status = e.toString();
+                
+            }
+        
+        return status;
+        
+    }
+    public static String adminLogin(String username, String password) {
+
+        String status = "";
+        
+            Connection con = ConnectionProvider.getCon();
+            ResultSet rs = select.getData("select * from admins where username='"+username+"' and password = '"+password+"'");
+            try {
+                if (rs.next()) {
+                    
+                    
+                        status = "admin";
+                    
                 }
             } catch (Exception e) {
                 status = e.toString();
