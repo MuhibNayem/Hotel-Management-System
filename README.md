@@ -3,8 +3,13 @@
  
  
  -> this code is based on NetBeans IDE.
+ 
+ 
  -> please install mySQL server to create local database.
+ 
+ 
  -> create the following tables:
+ 
    1.  create table admins(username varchar(200), password varchar(50));
    2.  create table users(name varchar(200), email varchar(200), password varchar(50), securityQuestion varchar(500), answer varchar(200), address varchar(200), 
            status varchar(200));
