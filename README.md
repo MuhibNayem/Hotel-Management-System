@@ -1,5 +1,7 @@
 # Hotel Management System
  this is my practice project of MVC pattern software architechture
+ 
+ 
  -> this code is based on NetBeans IDE.
  -> please install mySQL server to create local database.
  -> create the following tables:
