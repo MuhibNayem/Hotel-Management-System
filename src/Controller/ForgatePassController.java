@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import DAO.ForgetPasswordDAO;
 import javax.swing.JOptionPane;
 import model.ForgetPassModel;
 import model.LoginModel;

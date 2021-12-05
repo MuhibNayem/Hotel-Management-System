@@ -5,7 +5,7 @@
  */
 package model;
 
-import DAO.singupDAO;
+import model.DAO.singupDAO;
 
 /**
  *

@@ -1,9 +1,7 @@
-package DAO;
+package model.DAO;
 
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import DAO.InsertUpdateDelete;
-import DAO.select;
 
 public class ForgetPasswordDAO {
 

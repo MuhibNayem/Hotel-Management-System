@@ -5,7 +5,7 @@
  */
 package model;
 
-import DAO.loginDAO;
+import model.DAO.loginDAO;
 import javax.swing.JOptionPane;
 
 /**

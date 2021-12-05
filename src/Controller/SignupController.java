@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import DAO.singupDAO;
 import javax.swing.JOptionPane;
 import model.ForgetPassModel;
 import model.LoginModel;
@@ -54,19 +53,22 @@ public class SignupController {
     }   
 
     private void signup() {
-        model.setSecurityQues(view.getSecurityQuesComboBox().getSelectedItem().toString());
-        model.setName(view.getNameTextField().getText());
-        model.setEmail(view.getEmailTextField().getText());
-        model.setPassword(view.getPasswordField().getText());
-        model.setAnswer(view.getAnswerTextField().getText());
-        model.setAddress(view.getAddressTextField().getText());
+        
+        String securityQues = view.getSecurityQuesComboBox().getSelectedItem().toString();
+        String name = view.getNameTextField().getText();
+        String email = view.getEmailTextField().getText();
+        String password = view.getPasswordField().getText();
+        String answer = view.getAnswerTextField().getText();
+        String address = view.getAddressTextField().getText();
+        
+        model.setSecurityQues(securityQues);
+        model.setName(name);
+        model.setEmail(email);
+        model.setPassword(password);
+        model.setAnswer(answer);
+        model.setAddress(address);
 
-        String securityQues = model.getSecurityQues();
-        String name = model.getName();
-        String email = model.getEmail();
-        String password = model.getPassword();
-        String answer = model.getAnswer();
-        String address = model.getAddress();
+        
 
         int check = 0;
 

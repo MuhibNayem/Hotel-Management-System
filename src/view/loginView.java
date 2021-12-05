@@ -7,6 +7,8 @@ package view;
 
 
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.*;
 
 /**
@@ -35,8 +37,7 @@ public class loginView extends JFrame{
     
     private void initComponents() {
         
-        setPreferredSize(new java.awt.Dimension(1366, 768));
-        
+        setBounds(0, 0, 1366, 768);
         setTitle("Login");
 
         loginLable = new javax.swing.JLabel();
@@ -104,6 +105,7 @@ public class loginView extends JFrame{
         getContentPane().add(backgroundabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        
         
     }
 

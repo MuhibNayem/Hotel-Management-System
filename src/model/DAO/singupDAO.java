@@ -1,4 +1,4 @@
-package DAO;
+package model.DAO;
 
 
 import javax.swing.JOptionPane;

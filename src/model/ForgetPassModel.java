@@ -5,7 +5,7 @@
  */
 package model;
 
-import DAO.ForgetPasswordDAO;
+import model.DAO.ForgetPasswordDAO;
 
 /**
  *

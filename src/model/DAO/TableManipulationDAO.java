@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DAO;
+package model.DAO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import net.proteanit.sql.DbUtils;
 
@@ -24,7 +22,7 @@ public class TableManipulationDAO {
     
     public static TableModel adminTable(){
         
-        ResultSet rs = select.getData("select *from users");
+         ResultSet rs = select.getData("select name, email, securityQuestion, address, status from users");
         TableModel tablemodel = DbUtils.resultSetToTableModel(rs);
         return tablemodel;
         
@@ -44,7 +42,7 @@ public class TableManipulationDAO {
     
     public static TableModel adminSearch(String nameOrEmail){
         TableModel tablemodel = null;
-        ResultSet rs = select.getData("select *from users where name like '%"+nameOrEmail+"%' or email like '%"+nameOrEmail+"%'");
+        ResultSet rs = select.getData("select name, email, securityQuestion, address, status from users where name like '%"+nameOrEmail+"%' or email like '%"+nameOrEmail+"%'");
         tablemodel = DbUtils.resultSetToTableModel(rs);
         
         
@@ -194,7 +192,7 @@ public class TableManipulationDAO {
     }
     
     public static TableModel prevCustomerTable() {
-        ResultSet rs = select.getData("select *from customer");
+        ResultSet rs = select.getData("select *from customer where checkOut is not NULL");
         TableModel tablemodel = DbUtils.resultSetToTableModel(rs);
         return tablemodel;
     }

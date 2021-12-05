@@ -56,7 +56,6 @@ public class loginController {
         
         else if (flag.equals("admin")){
             check = "ture";
-            
             adminHomeModel am = new adminHomeModel();
             adminHomeView av = new adminHomeView();
             adminHomeController c = new adminHomeController(am, av);
