@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvclearning;
+package main;
 
 import Controller.loginController;
 import model.LoginModel;
@@ -13,7 +13,7 @@ import view.loginView;
  *
  * @author muhib
  */
-public class MVCLearning {
+public class Main {
 
     /**
      * @param args the command line arguments

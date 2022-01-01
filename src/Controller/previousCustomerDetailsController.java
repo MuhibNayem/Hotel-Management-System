@@ -63,26 +63,7 @@ public class previousCustomerDetailsController {
         view.dispose();
     }
 
-//    private void viewInvoice() {
-//        int index = prevCustomerDetailsTable.getSelectedRow();
-//        TableModel model = prevCustomerDetailsTable.getModel();
-//        String id = model.getValueAt(index, 0).toString();
-//        
-//        try{
-//            String newPath = "F:\\MVCLearning\\MVCLearning\\invoices\\"+id+".pdf";
-//                if((new File(newPath)).exists()){
-//                    Process p = Runtime
-//                            .getRuntime()
-//                            .exec("rundll32 url.dll, FileProtocolHandler "+newPath+"");
-//                }
-//                else
-//                    System.out.println("File is not Exists.");
-//        
-//        }
-//        catch(Exception e){
-//            JOptionPane.showMessageDialog(null, e);
-//        }
-//    }
+
     private void viewInvoice() {
         int index = prevCustomerDetailsTable.getSelectedRow();
         TableModel tableModel = prevCustomerDetailsTable.getModel();
@@ -107,7 +88,7 @@ public class previousCustomerDetailsController {
 
             } else if (choice == 0) {
                 try {
-                    String newPath = "F:\\MVCLearning\\MVCLearning\\invoices\\" + id + ".pdf";
+                    String newPath = "F:\\MVCLearning\\hotel_management_system\\invoices\\" + id + ".pdf";
                     if ((new File(newPath)).exists()) {
                         Process p = Runtime
                                 .getRuntime()

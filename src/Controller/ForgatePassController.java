@@ -48,6 +48,8 @@ public class ForgatePassController {
         loginView v = new loginView();
         loginController c = new loginController(m, v);
         c.initController();
+        view.setVisible(false);
+        view.dispose();
     }
 
     private void SaveNewPass() {
@@ -95,6 +97,8 @@ public class ForgatePassController {
         signUpView sv = new signUpView();
         SignupController c = new SignupController(sm, sv);
         c.initController();
+        view.setVisible(false);
+        view.dispose();
     }
 
     private void searchUser() {

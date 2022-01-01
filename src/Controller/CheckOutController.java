@@ -122,10 +122,10 @@ public class CheckOutController {
             model.setFulldetails(totalDaysStayed, totalAmountToPay, checkOutDate, id);
             String check = model.setRoomVacant(roomNumber);
 
-            String path = "F:\\MVCLearning\\MVCLearning\\invoices\\";
+            String path = "F:\\MVCLearning\\hotel_management_system\\invoices\\";
             com.itextpdf.text.Document doc = new com.itextpdf.text.Document();
             try {
-                PdfWriter.getInstance(doc, new FileOutputStream("F:\\MVCLearning\\MVCLearning\\invoices\\" + id + ".pdf"));
+                PdfWriter.getInstance(doc, new FileOutputStream("F:\\MVCLearning\\hotel_management_system\\invoices\\" + id + ".pdf"));
                 doc.open();
                 Paragraph paragrapg1 = new Paragraph("                                                                    Spydo Tech\n");
                 doc.add(paragrapg1);
@@ -180,7 +180,7 @@ public class CheckOutController {
         } else {
 
             try {
-                String newPath = "F:\\MVCLearning\\MVCLearning\\invoices\\" + id + ".pdf";
+                String newPath = "F:\\MVCLearning\\hotel_management_system\\invoices\\" + id + ".pdf";
                 if ((new File(newPath)).exists()) {
 
                     Process p = Runtime

@@ -73,6 +73,7 @@ public class loginController {
                 homeView sv = new homeView();
                 homeController c = new homeController(sm, sv);
                 c.initController();
+                view.setVisible(false);
                 view.dispose();
             }
             else if (check.equals("false")){
@@ -92,6 +93,8 @@ public class loginController {
     }
 
     private void ForgetPass() {
+        view.setVisible(false);
+        view.dispose();
         ForgetPassModel fm = new ForgetPassModel();
         ForgetPasswordView fv = new ForgetPasswordView();
         ForgatePassController c = new ForgatePassController(fm, fv);
@@ -99,6 +102,8 @@ public class loginController {
     }
 
     private void signup() {
+        view.setVisible(false);
+        view.dispose();
         SignupModel sm = new SignupModel();
         signUpView sv = new signUpView();
         SignupController c = new SignupController(sm, sv);

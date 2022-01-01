@@ -39,6 +39,8 @@ public class SignupController {
     }
 
     private void login() {
+        view.setVisible(false);
+        view.dispose();
         LoginModel m = new LoginModel();
         loginView v = new loginView();
         loginController c = new loginController(m, v);
@@ -85,6 +87,8 @@ public class SignupController {
     }
 
     private void forgetPass() {
+        view.setVisible(false);
+        view.dispose();
         ForgetPassModel fm = new ForgetPassModel();
         ForgetPasswordView fv = new ForgetPasswordView();
         ForgatePassController c = new ForgatePassController(fm, fv);
